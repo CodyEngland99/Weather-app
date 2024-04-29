@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="content-container">
+			<div id="left-side-content">
+				<div id="information-left">
+					<h1 id="city-name">Tulsa</h1>
+					<ul id="list-left">
+						<li class="list-item" id="weather-picture">
+							<img id="icon-weather" src="image/icons/icons/r05n.png" alt="" />
+						</li>
+						<li class="list-item" id="cur-temp">66&deg;</li>
+						<li class="list-item" id="weather-description">Drizzle</li>
+					</ul>
+				</div>
+			</div>
+			<div id="right-side-content">
+				<form autocomplete="off" id="form-container">
+					<input
+						type="text"
+						id="user-city"
+						placeholder="Enter"
+						class="css-input"
+					/>
+					<img id="submit" src="/image/submit.png" alt="">
+				</form>
+
+				<div id="weather-information">
+					<ul id="weather-list">
+						<li class="weather-item" id="cloud-coverage">Cloud Coverage: 60%</li>
+						<li class="weather-item" id="wind-direction">Wind Direction: SE</li>
+						<li class="weather-item" id="sunrise">Sunrise: 6:00</li>
+						<li class="weather-item" id="sunset">Sunset: 7:00</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
