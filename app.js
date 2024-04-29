@@ -23,7 +23,6 @@ const userInput = () => {
 
 const generateCards = (data) => {
 	const cityName = document.getElementById("city-name");
-	const cloudCov = document.getElementById("cloudy");
 	const weatherCurrent = document.getElementById("weather-description");
 	const tempCur = document.getElementById("cur-temp");
 	const iconWeather = document.getElementById("icon-weather");
@@ -34,12 +33,15 @@ const generateCards = (data) => {
   
 
 	const celToFahr = Math.round(data.data[0].app_temp * 1.8 + 32);
-  const weatherIcon = ``;
 
-	cityName.innerHTML = `City ${data.data[0].city_name}`;
-	cloudCov.innerHTML = `Cloud Coverage: ${data.data[0].clouds}%`;
+	cityName.innerHTML = `${data.data[0].city_name}`;
 	weatherCurrent.innerHTML = `Weather Description: ${data.data[0].weather.description}`;
 	tempCur.innerHTML = `Current Tempature: ${celToFahr}&deg;`;
+	iconWeather.src = `image/icons/icons/${data.data[0].weather.icon}.png`
+	cloundCoverage.innerHTML = `Cloud Coverage: ${data.data[0].clouds}%`
+	windDirection.innerHTML = `Wind Direction: ${data.data[0].wind_cdir}`
+	sunrise.innerHTML = `Sunrise: ${data.data[0].sunrise}`
+	sunset.innerHTML = `Sunrise: ${data.data[0].sunset}`
 };
 
 subButton.addEventListener("click", userInput);
