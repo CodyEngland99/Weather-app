@@ -4,39 +4,51 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
 		<title>Document</title>
 	</head>
 	<body>
 		<div id="content-container">
-			<div id="left-side-content">
-				<div id="information-left">
+			<div id="city-weather-content" class="sizing-containers">
+				<div class="form__group field">
+					<input
+						type="input"
+						class="form__field"
+						placeholder="Name"
+						name="name"
+						id="user-city"
+						required
+					/>
+					<label for="name" class="form__label">City</label>
+					<button id="submit">Submit</button>
+				</div>
+				<div id="title-container">
 					<h1 id="city-name">Tulsa</h1>
+				</div>
+				<div id="imgage-container">
+					<img id="icon-weather" src="image/icons/icons/r05n.png" alt="" />
+				</div>
+				<div id="list-container">
 					<ul id="list-left">
-						<li class="list-item" id="weather-picture">
-							<img id="icon-weather" src="image/icons/icons/r05n.png" alt="" />
-						</li>
 						<li class="list-item" id="cur-temp">66&deg;</li>
 						<li class="list-item" id="weather-description">Drizzle</li>
 					</ul>
 				</div>
 			</div>
-			<div id="right-side-content">
-				<form autocomplete="off" id="form-container">
-					<input
-						type="text"
-						id="user-city"
-						placeholder="Enter City"
-						class="css-input"
-					/>
-					<img id="submit" src="/image/submit.png" alt="">
-				</form>
-
+			<div id="weather-details-container" class="sizing-containers">
 				<div id="weather-information">
-					<ul id="weather-list">
-						<li class="weather-item" id="cloud-coverage">Cloud Coverage: 60%</li>
-						<li class="weather-item" id="wind-direction">Wind Direction: SE</li>
-						<li class="weather-item" id="sunrise">Sunrise: 6:00</li>
-						<li class="weather-item" id="sunset">Sunset: 7:00</li>
+					<ul id="weather-details">
+						<li class="weather-list-item" id="cloud-coverage">Coverage: 60%</li>
+						<li class="weather-list-item" id="wind-direction">
+							Wind Direction: SE
+						</li>
+						<li class="weather-list-item" id="air-quality">Air Quality: 19</li>
+						<li class="weather-list-item" id="vision">Visibility: 12 Miles</li>
 					</ul>
 				</div>
 			</div>
